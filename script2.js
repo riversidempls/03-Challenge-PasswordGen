@@ -1,4 +1,17 @@
 // Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// passwordText.value = password;
+
+console.log(document.querySelector("#password"));
+
+// Write a function to change the drop shadow style on the main card on click
+// so user gets additional visual cue that password was successfully created.
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", createPassword);
+//generateBtn.addEventListener("click", bigShadow);
+
 
 
 // Write password to the #password input
@@ -48,18 +61,21 @@
     //check to see if at least one parameter is checked, if not
     //display an alert.
     if (upper + lower + number + symbol === 0) {
-      alert("Please check atleast one box!");
+      alert("Please check at least one box!");
       return;
     }
     const passwordBox = document.getElementById("password");
     const length = document.getElementById("length");
+
        //check length because html validation doesn't seem to be working
        if ( length.value < 8 || length.value > 128 ) {
         alert("Please choose a length within range 8 - 128.");
         return;
       }
-      console.log(length.value);
+      console.log(document.getElementById("length"));
+
     let password = "";
+
     while (length.value > password.length) {
       let paramToAdd = getParams[Math.floor(Math.random() * getParams.length)];
       let isChecked = document.getElementById(paramToAdd.name).checked;
@@ -69,22 +85,10 @@
     }
      
     passwordBox.textContent = password;
+    //Password was set successfully, final step is to light up green dropshadow.
+    bigShadow();
+
   }
-
-  var generateBtn = document.querySelector("#generate");
-
- // passwordText.value = password;
-
- console.log(document.querySelector("#password"));
-
-// Write a function to change the drop shadow style on the main card on click
-// so user gets additional visual cue that password was successfully created.
-
-     function bigShadow() {
-      document.querySelector(".card").setAttribute("style", "box-shadow: 0px 30px 14px 14px #99ff99")
-      }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", createPassword);
-generateBtn.addEventListener("click", bigShadow);
-
+  function bigShadow() {
+    document.querySelector(".card").setAttribute("style", "box-shadow: 0px 30px 14px 14px #99ff99")
+    }
