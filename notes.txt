@@ -1,0 +1,45 @@
+On page load I want a to see a popup box kind of slowly dissolve in on 
+top of the current page content.
+
+This new box could even use the same header text "Password Generator"
+and button at the bottom is greyed out until all required parameters are entered.
+Subtext "Select criteria for your new secure password."
+
+no, just keep it simple and work with the criteria as written
+
+1) page loads as is, user clicks "Generate Password" button and 
+drop shadow appears to raise the box off the page.
+
+2) Alert Prompts user with a series of questions.
+    -"Choose a password length between 8 and 128 characters."
+        textbox input with validation
+    -"Include uppercase characters?"
+        rocker switch input for Y/N 
+    -"Include lowercase characters?"
+        rocker switch input for Y/N
+    -"Include numeric values?"
+        rocker switch input for Y/N 
+    -"Inclued special characters?"
+        rocker switch input for Y/N 
+
+    Need Validation to check at least one character type is selected.
+    If not, prompt user.
+    "At least one character type must be selected "yes".
+
+    If validation passes, then the password is displayed and
+    the alert window vanishes.
+
+
+    Extras if time allows:
+
+    1) Copy to clipboard button.
+    2) Better styled alert window.
+
+
+    -
+
+        
+
+
+
+
