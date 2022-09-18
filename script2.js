@@ -54,7 +54,7 @@
     const passwordBox = document.getElementById("password");
     const length = document.getElementById("length");
        //check length because html validation doesn't seem to be working
-       if ( length.value <= 8 || length.value > 128 ) {
+       if ( length.value < 8 || length.value > 128 ) {
         alert("Please choose a length within range 8 - 128.");
         return;
       }
@@ -67,6 +67,7 @@
         password += paramToAdd();
       }
     }
+     
     passwordBox.textContent = password;
   }
 
@@ -74,5 +75,16 @@
 
  // passwordText.value = password;
 
+ console.log(document.querySelector("#password"));
+
+// Write a function to change the drop shadow style on the main card on click
+// so user gets additional visual cue that password was successfully created.
+
+     function bigShadow() {
+      document.querySelector(".card").setAttribute("style", "box-shadow: 0px 30px 14px 14px #99ff99")
+      }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", createPassword);
+generateBtn.addEventListener("click", bigShadow);
+
