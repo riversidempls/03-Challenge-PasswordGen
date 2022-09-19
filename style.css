@@ -108,7 +108,7 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 5vw;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -120,18 +120,18 @@ button[disabled] {
 
 @media (max-width: 690px) {
   .btn {
-    font-size: 1rem;
+    font-size: 5vw;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
   #password {
-    font-size: 12rem;
+    font-size: 5vw;
   }
 }
 
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 5vw;
   }
 }
