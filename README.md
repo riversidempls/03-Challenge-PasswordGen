@@ -11,5 +11,5 @@ Some HTML and CSS edits were also necessary in order to create a responsive desi
 (https://riversidempls.github.io/03-Challenge-PasswordGen/)
 
 ## Screenshot
-![Screenshot of website](./assets/screenshot.png)
+![Screenshot of website](./Assets/screenshot.png)
 
